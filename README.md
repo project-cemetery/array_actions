@@ -11,6 +11,9 @@ $ composer require kamyshev/array_actions
 
 ## Usage
 
+Actions list:
++ [array_find](#array_find)
+
 ### array_find
 
 To use `array_find`, simply pass an array and callback:
