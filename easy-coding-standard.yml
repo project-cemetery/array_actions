@@ -1,0 +1,19 @@
+imports:
+- { resource: '%vendor_dir%/symplify/easy-coding-standard/config/symfony.yml' }
+
+services:
+  PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer:
+    align_double_arrow: true
+  PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
+    syntax: short
+  PhpCsFixer\Fixer\Operator\ConcatSpaceFixer:
+    spacing: one
+
+parameters:
+  cache_directory: .ecs_cache
+  exclude_checkers:
+  - 'PhpCsFixer\Fixer\Phpdoc\PhpdocAnnotationWithoutDotFixer'
+  - 'PhpCsFixer\Fixer\Phpdoc\PhpdocSummaryFixer'
+  - 'PhpCsFixer\Fixer\ControlStructure\YodaStyleFixer'
+  exclude_files:
+  - '**/vendor/**/*'
