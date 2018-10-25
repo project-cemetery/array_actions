@@ -16,10 +16,10 @@
     "source": "https://github.com/igorkamyshev/array_actions"
   },
   "require": {
-    "php": ">=7.0"
+    "php": ">=7.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^6.5|^7.0",
+    "phpunit/phpunit": "^7.0",
     "vimeo/psalm": "^2.0",
     "symplify/easy-coding-standard": "^5.1"
   },
