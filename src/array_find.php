@@ -10,7 +10,7 @@
  */
 function array_find(array $arr, callable $callback)
 {
-    $elements = array_values(array_filter($arr, $callback));
+    $elements = array_filter($arr, $callback);
 
     return array_head($elements);
 }

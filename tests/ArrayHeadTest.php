@@ -6,6 +6,8 @@ class ArrayHeadTest extends TestCase
 {
     protected $states;
 
+    protected $statesWithKeys;
+
     protected $emptyStates;
 
     public function setUp()
@@ -38,6 +40,34 @@ class ArrayHeadTest extends TestCase
             ],
         ];
 
+        $this->statesWithKeys = [
+            'in1' => [
+                'state'  => 'IN',
+                'city'   => 'Indianapolis',
+                'object' => 'School bus',
+            ],
+            'in2' => [
+                'state'  => 'IN',
+                'city'   => 'Indianapolis',
+                'object' => 'Manhole',
+            ],
+            'in3' => [
+                'state'  => 'IN',
+                'city'   => 'Plainfield',
+                'object' => 'Basketball',
+            ],
+            'ca-1' => [
+                'state'  => 'CA',
+                'city'   => 'San Diego',
+                'object' => 'Light bulb',
+            ],
+            'ca-2' => [
+                'state'  => 'CA',
+                'city'   => 'Mountain View',
+                'object' => 'Space pen',
+            ],
+        ];
+
         $this->emptyStates = [];
     }
 
@@ -52,6 +82,20 @@ class ArrayHeadTest extends TestCase
         $this->assertEquals(
             $expected,
             array_head($this->states)
+        );
+    }
+
+    public function testHeadOfArrayWithKeys()
+    {
+        $expected = [
+            'state'  => 'IN',
+            'city'   => 'Indianapolis',
+            'object' => 'School bus',
+        ];
+
+        $this->assertEquals(
+            $expected,
+            array_head($this->statesWithKeys)
         );
     }
 
