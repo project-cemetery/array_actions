@@ -61,3 +61,52 @@ Array
 ```
 
 If the element was not found, `array_find` returns `null`.
+
+### array_head
+
+To use `array_find`, simply pass an array and callback:
+
+``` php
+$records = [
+    [
+        'state'  => 'IN',
+        'city'   => 'Indianapolis',
+        'object' => 'School bus',
+    ],
+    [
+        'state'  => 'IN',
+        'city'   => 'Indianapolis',
+        'object' => 'Manhole',
+    ],
+    [
+        'state'  => 'IN',
+        'city'   => 'Plainfield',
+        'object' => 'Basketball',
+    ],
+    [
+        'state'  => 'CA',
+        'city'   => 'San Diego',
+        'object' => 'Light bulb',
+    ],
+    [
+        'state'  => 'CA',
+        'city'   => 'Mountain View',
+        'object' => 'Space pen',
+    ],
+];
+
+$grouped = array_head($records);
+```
+
+Example output:
+
+``` text
+Array
+(
+    [state] => IN
+    [city] => Indianapolis
+    [object] => School bus
+)
+```
+
+If the element was not found, `array_head` returns `null`.

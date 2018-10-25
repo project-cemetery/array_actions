@@ -24,6 +24,9 @@
     "symplify/easy-coding-standard": "^5.1"
   },
   "autoload": {
-    "files": ["src/array_find.php"]
+    "files": [
+      "src/array_find.php",
+      "src/array_head.php"
+    ]
   }
 }
