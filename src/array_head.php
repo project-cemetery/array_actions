@@ -9,7 +9,9 @@
  */
 function array_head(array $arr)
 {
-    return (count($arr) > 0)
-        ? $arr[0]
+    $elements = array_values($arr);
+
+    return (count($elements) > 0)
+        ? $elements[0]
         : null;
 }
