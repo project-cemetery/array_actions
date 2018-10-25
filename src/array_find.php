@@ -12,7 +12,5 @@ function array_find(array $arr, callable $callback)
 {
     $elements = array_values(array_filter($arr, $callback));
 
-    return (count($elements) > 0)
-        ? $elements[0]
-        : null;
+    return array_head($elements);
 }
