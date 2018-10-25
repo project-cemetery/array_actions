@@ -13,6 +13,7 @@ $ composer require kamyshev/array_actions
 
 Actions list:
 + [array_find](#array_find)
++ [array_head](#array_head)
 
 ### array_find
 
@@ -47,7 +48,7 @@ $records = [
     ],
 ];
 
-$grouped = array_find($records, function ($state) {
+$found = array_find($records, function ($state) {
     return $state['city'] === 'San Diego';
 });
 ```
@@ -98,7 +99,7 @@ $records = [
     ],
 ];
 
-$grouped = array_head($records);
+$head = array_head($records);
 ```
 
 Example output:
@@ -112,4 +113,4 @@ Array
 )
 ```
 
-If the element was not found, `array_head` returns `null`.
+If the array is empty, `array_head` returns `null`.
