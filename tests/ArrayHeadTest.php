@@ -65,7 +65,6 @@ class ArrayHeadTest extends TestCase
         );
     }
 
-
     /**
      * @expectedException \TypeError
      */

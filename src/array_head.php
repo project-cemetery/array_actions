@@ -3,7 +3,7 @@
 /**
  * @author Igor Kamyshev
  *
- * @param array    $arr
+ * @param array $arr
  *
  * @return mixed|null
  */
