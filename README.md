@@ -13,6 +13,7 @@ $ composer require kamyshev/array_actions
 
 Actions list:
 + [array_find](#array_find)
++ [array_head](#array_head)
 
 ### array_find
 
@@ -47,7 +48,7 @@ $records = [
     ],
 ];
 
-$grouped = array_find($records, function ($state) {
+$found = array_find($records, function ($state) {
     return $state['city'] === 'San Diego';
 });
 ```
@@ -64,3 +65,52 @@ Array
 ```
 
 If the element was not found, `array_find` returns `null`.
+
+### array_head
+
+To use `array_find`, simply pass an array and callback:
+
+``` php
+$records = [
+    [
+        'state'  => 'IN',
+        'city'   => 'Indianapolis',
+        'object' => 'School bus',
+    ],
+    [
+        'state'  => 'IN',
+        'city'   => 'Indianapolis',
+        'object' => 'Manhole',
+    ],
+    [
+        'state'  => 'IN',
+        'city'   => 'Plainfield',
+        'object' => 'Basketball',
+    ],
+    [
+        'state'  => 'CA',
+        'city'   => 'San Diego',
+        'object' => 'Light bulb',
+    ],
+    [
+        'state'  => 'CA',
+        'city'   => 'Mountain View',
+        'object' => 'Space pen',
+    ],
+];
+
+$head = array_head($records);
+```
+
+Example output:
+
+``` text
+Array
+(
+    [state] => IN
+    [city] => Indianapolis
+    [object] => School bus
+)
+```
+
+If the array is empty, `array_head` returns `null`.
